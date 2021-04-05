@@ -1,0 +1,45 @@
+package russi;
+import java.util.*;
+public class Palendrome_Integer {
+    public static void main(String[] args) {
+        
+        //Scanner Object
+        Scanner input = new Scanner (System.in);
+        
+        //User Input
+        System.out.print("Enter a number to check Palindrome: ");
+        int number = input.nextInt();
+        
+        //Caller Function for reversing
+        int isReverse = reverse(number);
+        
+        //Caller Function for palindrome validity
+        boolean isPal = isPalindrome(number , isReverse);
+        
+        //Verifying results obtained from method returns
+        if(isPal)
+            System.out.println("Yes Palindrome");
+        else
+            System.out.println("Not Palindrome");
+    }
+    
+    // Reverse method that reverses an integer
+    public static int reverse(int number){
+        String stringNum = "" + number;
+        String reverseNumber = "";
+        for (int i = 0; i < stringNum.length(); i++) {
+            reverseNumber = stringNum.charAt(i) + reverseNumber;
+        }
+        int results = 0;
+        results = Integer.parseInt(reverseNumber);
+        return results;
+    }
+    
+    // Palindrome validator
+    public static boolean isPalindrome(int number , int isReverse){
+        if (number == isReverse){
+            return true;
+        }
+        return  false;
+    }
+}
