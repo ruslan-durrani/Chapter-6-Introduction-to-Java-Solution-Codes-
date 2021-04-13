@@ -7,7 +7,7 @@ public class Convert_Millis_Time {
         //Calling convertMillis Method for conversion
         String time = convertMillis(milliSeconds);
         //Displaying results
-        System.out.println("GMT Time: "+time);
+        System.out.println("GMT Time:\n"+time);
     }
     //Method for Milliseconds Conversion with return type String
     public static String convertMillis(long millis){
